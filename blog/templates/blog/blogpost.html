@@ -1,0 +1,80 @@
+{% extends 'blog/basic.html' %}
+{% block title %} The PromptCart- Blog{% endblock %}
+{% block body %}
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-8 blog-main">
+      <h3 class="pb-4 mb-4 font-italic border-bottom">
+        {{post.title}}
+      </h3>
+
+      <div class="blog-post">
+        <h2 class="blog-post-title">{{post.head0}}</h2>
+        <p class="blog-post-meta">January 1, 2023 by <a href="#">Nikhil</a></p>
+        <div class="fb-like" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-width="" data-layout="button" data-action="like" data-size="large" data-share="true"></div>
+                <p>{{post.chead0}}</p>
+
+
+                <h2>{{post.head1}}</h2>
+                <p>{{post.chead1}}</p>
+                <h2>{{post.head2}}</h2>
+                <p>{{post.chead2}}</p>
+                <div class="fb-comments" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-width="" data-numposts="5"></div>
+
+
+            </div><!-- /.blog-post -->
+
+
+
+
+
+
+
+    </div><!-- /.blog-main -->
+
+    <aside class="col-md-4 blog-sidebar">
+      <div class="p-4 mb-3 bg-light rounded">
+        <h4 class="font-italic">About</h4>
+        <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+      </div>
+      <div class="fb-share-button" data-href="http://127.0.0.1:8000/blog/blogpost/3" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Fblog%2Fblogpost%2F3&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+
+      <div class="p-4">
+        <h4 class="font-italic">Archives</h4>
+        <ol class="list-unstyled mb-0">
+          <li><a href="#">March 2014</a></li>
+          <li><a href="#">February 2014</a></li>
+          <li><a href="#">January 2014</a></li>
+          <li><a href="#">December 2013</a></li>
+          <li><a href="#">November 2013</a></li>
+          <li><a href="#">October 2013</a></li>
+          <li><a href="#">September 2013</a></li>
+          <li><a href="#">August 2013</a></li>
+          <li><a href="#">July 2013</a></li>
+          <li><a href="#">June 2013</a></li>
+          <li><a href="#">May 2013</a></li>
+          <li><a href="#">April 2013</a></li>
+        </ol>
+      </div>
+
+      <div class="p-4">
+        <h4 class="font-italic">Connect with us</h4>
+        <ol class="list-unstyled">
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ol>
+      </div>
+    </aside><!-- /.blog-sidebar -->
+
+  </div><!-- /.row -->
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

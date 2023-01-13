@@ -1,0 +1,69 @@
+{% extends 'shop/basic.html' %}
+{% block title %}Congratulations{% endblock %}
+{% block body %}
+
+<style>
+
+.button {
+  background-color: #FF4500; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {width: 250px;}
+.button2 {width: 50%;}
+.button3 {width: 100%;}
+
+body {
+  background-image: #FAEBD7;
+}
+
+</style>
+  {% load static %}
+<main>
+  <div class="container py-4">
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+      	<!-- <img src='{% static "shop/back.jpg" %}' alt="..."> -->
+        
+        <h1 class="display-5 fw-bold">Congratulations!</h1>
+        <p class="col-md-8 fs-4">Your order has been placed. Kindly check your email for order confirmation and delivery details. Your order ID is {{id}}. You may use it to track your order.</p>
+        <button class="button button1">Track your order!</button>
+      </div>
+    </div>
+
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 ">
+            <a href="https://www.primevideo.com/region/eu/detail/amzn1.dv.gti.6b538d89-cc9c-470c-8728-c4b2f9dec0d6?ref_=atv_sso_std"><img src='{% static "shop/ryan.jpg" %}' width="550px" height="390px" alt="Workplace"></a>
+
+          <a href="https://www.primevideo.com/region/eu/detail/amzn1.dv.gti.6b538d89-cc9c-470c-8728-c4b2f9dec0d6?ref_=atv_sso_std">
+         <button class="button button3">Watch Now!</button>
+          </a>
+         
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100">
+          <a href="/shop"><img src='{% static "shop/pexels-mnz-1598505.jpg" %}' width="550px" height="390px" alt="Workplace"></a>
+
+          <a href="/shop">
+          <button class="button button3">Explore More!</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+{% endblock %}

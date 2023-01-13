@@ -1,0 +1,75 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %} {{product.product_name}} - My Awesome Cart {% endblock %}
+
+
+
+
+
+
+{% block body %}
+
+<style>
+.button {
+  background-color: #ff828a;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+</style>
+
+
+
+
+
+<div class="container my-4">
+
+    <div class="row">
+    <div class="col-md-4">
+     <div class="row">
+         <img src="/media/{{product.image}}" width="390px" height="450px" alt="...">
+
+     </div>
+     <div class="row">
+     <span id="divpr{{i.id}}" class="divpr">
+         <button class="button button1 mx-3">BUY NOW</button>
+         <button id="pr{{i.id}}" class="button button2">Add To Cart</button></span>
+     </div>
+     </div>
+    <div class="col-md-8">
+        <h1>{{product.product_name}}</h1>
+        <h3> <b>₹{{product.price}}</b></h3>
+        <p>{{product.desc}}
+
+<!--&lt;!&ndash;        <button class="btn btn-primary mx-4">Buy Now</button>&ndash;&gt;-->
+<!--&lt;!&ndash;        <button class="btn btn-primary mx-5">Add To Cart</button>-->
+
+    </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
+{% block js %}
+
+
+
+{% endblock %}
